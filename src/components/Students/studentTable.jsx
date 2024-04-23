@@ -1,0 +1,42 @@
+import React from 'react';
+
+const StudentTable = ({ data }) => {
+  return (
+    <div className="table-container">
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Parents Name</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Address</th>
+            <th>Date of Birth</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row) => (
+            <tr key={row.id}>
+              <td>{row.id}</td>
+              <td>{row.photo}</td>
+              <td>{row.name}</td>
+              <td>{row.gender}</td>
+              <td>{row.parentName}</td>
+              <td>{row.class}</td>
+              <td>{row.section}</td>
+              <td>{row.address}</td>
+              <td>{row.dateOfBirth}</td>
+              <td>{row.action}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default StudentTable;
