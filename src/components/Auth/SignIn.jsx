@@ -35,6 +35,7 @@ function SignIn({ setIsAuthenticated }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    handleLogin();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),

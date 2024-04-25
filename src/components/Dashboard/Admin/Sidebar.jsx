@@ -13,9 +13,15 @@ export default function SideBar() {
   
     const toggleSubMenu = () => {
       setIsSubMenuOpen(!isSubMenuOpen);
+      if (isSubMenuOpenOne == true) {
+        setIsSubMenuOpenOne(false)
+      }
     };
     const toggleSubMenuOne = () => {
       setIsSubMenuOpenOne(!isSubMenuOpenOne);
+      if (isSubMenuOpen == true) {
+        setIsSubMenuOpen(false)
+      }
     };
 
     return (
@@ -44,7 +50,7 @@ export default function SideBar() {
             {/* Student sub-menu Links */}
             <Divider sx={{my:0}} />
             <Collapse in={isSubMenuOpen}>
-              <List component="div" disablePadding>
+              <List className="sub-menu" component="div" >
                 <ListItem button component={Link} to="/students">
                   <ListItemText primary="All Students" />
                 </ListItem>
@@ -67,7 +73,7 @@ export default function SideBar() {
             </ListItem>
             <Divider sx={{my:0}} />
             <Collapse in={isSubMenuOpenOne}>
-              <List component="div" disablePadding>
+              <List className="sub-menu" component="div" disablePadding>
                 <ListItem button component={Link} to="/teacher"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="All Teachers" />
                 </ListItem>

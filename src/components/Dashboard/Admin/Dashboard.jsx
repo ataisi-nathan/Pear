@@ -17,6 +17,7 @@ import SideBar from './Sidebar';
 import Home from './home';
 import AllStudent from '../../Students/allStudent';
 import StudentDetail from '../../Students/StudentDetail';
+import AdmitForm from '../../Students/admitForm';
 
 const drawerWidth = 240;
 
@@ -156,6 +157,9 @@ export default function AdminDashboard({ handleLogout }) {
         <Routes>
           <Route path="/dashboard" element={<Home />} />
             <Route path="/students" element={<AllStudent />} />
+            <Route path="/students/detail" element={<StudentDetail />} />
+            <Route path="/students/admit" element={<AdmitForm />} />
+            <Route path="/students/detail" element={<StudentDetail />} />
             <Route path="/students/detail" element={<StudentDetail />} />
             <Route path="/teachers" element={<Home />} />
             <Route path="/parents" element={<Home />} />
