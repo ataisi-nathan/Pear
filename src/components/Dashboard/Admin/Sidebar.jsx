@@ -32,6 +32,7 @@ export default function SideBar() {
             ...(open && { display: 'none' }),
           }}
         onMouseEnter={toggleDrawer}
+        className="blue-background"
         >
             
           <List >
@@ -42,7 +43,11 @@ export default function SideBar() {
             </ListItem>
             <Divider sx={{my:0}} />
 
-            {/* Student Toggle Button */}
+            {/*
+            ******************************
+            Students Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} onClick={toggleSubMenu}> {/* Add Link component with "to" prop */}
               <Person sx={{marginRight: "25px"}} />    
               <ListItemText primary="Students" />
@@ -54,66 +59,169 @@ export default function SideBar() {
                 <ListItem button component={Link} to="/students">
                   <ListItemText primary="All Students" />
                 </ListItem>
+                
+                <Divider sx={{my:0}} />
+                
                 <ListItem button component={Link} to="/students/detail">
                   <ListItemText primary="Student Detail" />
                 </ListItem>
+                
+                <Divider sx={{my:0}} />
+                
                 <ListItem button component={Link} to="/students/admit"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="Student Admit" />
                 </ListItem>
-                <ListItem button component={Link} to="/students/promotion"> {/* Add Link component with "to" prop */}
-                  <ListItemText primary="Student Promotion" />
-                </ListItem>
+                
+                <Divider sx={{my:0}} />
+                
               </List>
             </Collapse>
+            {/*
+            ******************************
+            Students Button Ends Here
+            ******************************
+            */}
 
-            {/* Teacher Button */}
+            
+            {/*
+            ******************************
+            Teacher Button Starts Here
+            ******************************
+            */}
             <ListItem button onClick={toggleSubMenuOne}>
               <School sx={{marginRight: "25px"}} />
               <ListItemText primary="Teachers" />
             </ListItem>
+
             <Divider sx={{my:0}} />
+
+            {/* Teachers Sub-menu Toggle Button */}
             <Collapse in={isSubMenuOpenOne}>
               <List className="sub-menu" component="div" disablePadding>
-                <ListItem button component={Link} to="/teacher"> {/* Add Link component with "to" prop */}
+                <ListItem button component={Link} to="/teachers"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="All Teachers" />
                 </ListItem>
-                <ListItem button component={Link} to="/teacher-details"> {/* Add Link component with "to" prop */}
+
+                <Divider sx={{my:0}} />
+                
+                <ListItem button component={Link} to="/teachers/detail"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="Teacher Details" />
                 </ListItem>
-                <ListItem button component={Link} to="/teacher/product3"> {/* Add Link component with "to" prop */}
+                
+                <Divider sx={{my:0}} />
+                
+                <ListItem button component={Link} to="/add-teacher"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="Add Teacher" />
                 </ListItem>
+                <Divider sx={{my:0}} />
               </List>
             </Collapse>
+            {/*
+            ******************************
+            Teacher Button Ends Here
+            ******************************
+            */}
+
+
+            {/*
+            ******************************
+            Parents Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/parents"> {/* Add Link component with "to" prop */}
               <People sx={{marginRight: "25px"}} />
               <ListItemText primary="Parents" />
             </ListItem>
+            {/*
+            ******************************
+            Parents Button Ends Here
+            ******************************
+            */}
+
             <Divider sx={{my:0}} />
+             
+            {/*
+            ******************************
+            Subject Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/subjects"> {/* Add Link component with "to" prop */}
               <MenuBook sx={{marginRight: "25px"}} />
               <ListItemText primary="Subjects" />
             </ListItem>
+            {/*
+            ******************************
+            Subject Button Ends Here
+            ******************************
+            */}
+
             <Divider sx={{my:0}} />
+
+            {/*
+            ******************************
+            Classes Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/classes"> {/* Add Link component with "to" prop */}
               <Class sx={{marginRight: "25px"}} />
               <ListItemText primary="Classes" />
             </ListItem>
+            {/*
+            ******************************
+            Classes Button Ends Here
+            ******************************
+            */}
+
             <Divider sx={{my:0}} />
+
+            {/*
+            ******************************
+            Events Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/events"> {/* Add Link component with "to" prop */}
               <Event sx={{marginRight: "25px"}} />
               <ListItemText primary="Events" />
             </ListItem>
+            {/*
+            ******************************
+            Events Button Ends Here
+            ******************************
+            */}
+            
             <Divider sx={{my:0}} />
+
+            {/*
+            ******************************
+            Results Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/results"> {/* Add Link component with "to" prop */}
               <TrendingUp sx={{marginRight: "25px"}} />
               <ListItemText primary="Results" />
             </ListItem>
+            {/*
+            ******************************
+            Results Button Ends Here
+            ******************************
+            */}
+            
             <Divider sx={{my:0}} />
+
+            {/*
+            ******************************
+            Announcement Button Starts Here
+            ******************************
+            */}
             <ListItem button component={Link} to="/announcement"> {/* Add Link component with "to" prop */}
               <Announcement sx={{marginRight: "25px"}} />
               <ListItemText primary="Announcement" />
             </ListItem>
+            {/*
+            ******************************
+            Announcement Button Starts Here
+            ******************************
+            */}
             <Divider sx={{my:0}} />
           </List>
         </div>

@@ -41,18 +41,18 @@ export default function AdmitForm() {
                     <p>Class</p>
                     <select name="class" id="class">
                       <option value="1st Grade">1st Grade</option>
-                      <option value="1st Grade">2nd Grade</option>
-                      <option value="1st Grade">3rd Grade</option>
-                      <option value="1st Grade">4th Grade</option>
-                      <option value="1st Grade">5th Grade</option>
-                      <option value="1st Grade">6th Grade</option>
-                      <option value="1st Grade">7th Grade</option>
-                      <option value="1st Grade">8th Grade</option>
-                      <option value="1st Grade">9th Grade</option>
+                      <option value="2nd Grade">2nd Grade</option>
+                      <option value="3rd Grade">3rd Grade</option>
+                      <option value="4th Grade">4th Grade</option>
+                      <option value="5th Grade">5th Grade</option>
+                      <option value="6th Grade">6th Grade</option>
+                      <option value="7th Grade">7th Grade</option>
+                      <option value="8th Grade">8th Grade</option>
+                      <option value="9th Grade">9th Grade</option>
                     </select>
                   </label>
                   <label htmlFor="section">
-                    <p>Class</p>
+                    <p>Section</p>
                     <select name="section" id="section">
                       <option value="A">A</option>
                       <option value="B">B</option>

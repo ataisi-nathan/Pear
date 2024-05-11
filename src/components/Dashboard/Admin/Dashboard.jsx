@@ -18,6 +18,10 @@ import Home from './home';
 import AllStudent from '../../Students/allStudent';
 import StudentDetail from '../../Students/StudentDetail';
 import AdmitForm from '../../Students/admitForm';
+import AllTeacher from '../../Teachers/allTeachers';
+import AllParent from '../../Parents/allParents';
+import TeacherDetail from '../../Teachers/teacherDetail';
+import Subjects from '../../Courses/courses';
 
 const drawerWidth = 240;
 
@@ -78,7 +82,7 @@ export default function AdminDashboard({ handleLogout }) {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar className='blue-background' position="absolute" open={open}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -133,7 +137,7 @@ export default function AdminDashboard({ handleLogout }) {
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
-          <Toolbar
+          <Toolbar className='blue-background'
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -147,7 +151,7 @@ export default function AdminDashboard({ handleLogout }) {
             </IconButton>
           </Toolbar>
           <Divider />
-          <List component="nav">
+          <List component="nav" className='blue-background full-height'>
             <SideBar />
           </List>
         </Drawer>
@@ -160,9 +164,10 @@ export default function AdminDashboard({ handleLogout }) {
             <Route path="/students/detail" element={<StudentDetail />} />
             <Route path="/students/admit" element={<AdmitForm />} />
             <Route path="/students/detail" element={<StudentDetail />} />
-            <Route path="/students/detail" element={<StudentDetail />} />
-            <Route path="/teachers" element={<Home />} />
-            <Route path="/parents" element={<Home />} />
+            <Route path="/teachers" element={<AllTeacher />} />
+            <Route path="/teachers/detail" element={<TeacherDetail />} />
+            <Route path="/parents" element={<AllParent />} />
+            <Route path="/subjects" element={<Subjects />} />
           {/* </Route> */}
         </Routes>
       </Box>

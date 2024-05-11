@@ -100,3 +100,27 @@ a {
 .form p {
     margin-bottom: 0px;
 }
+.row {
+    display: flex;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.primary {
+    background-color: blueviolet;
+    float: right;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px 20px;
+}
+.blue-background {
+    background-color: #1976D2;
+    color: white;
+}
+.full-height {
+    height: 100%;
+}
