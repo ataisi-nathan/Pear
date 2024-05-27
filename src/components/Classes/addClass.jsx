@@ -1,7 +1,7 @@
 import { Box, Toolbar, Container, Grid, Paper, Typography } from "@mui/material";
 import Copyright from "../Common/copyright";
 
-export default function AdmitForm() {
+export default function AddClass() {
 
   return (
     <Box
@@ -79,45 +79,11 @@ export default function AdmitForm() {
                     <p>Religion</p>
                     <input type="text" name="religion" id="religion" />
                   </label>
-                  <input type="file" name="file" id="file" />
+                  <input className="top-30" type="file" name="file" id="file" />
                 </div>
-              </Paper>
-              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                <div className="heading-row">
-                  <Typography variant='h6'>Parents Information</Typography>
-                  <div className="filter">
-                    {/* To be added later */}
-                  </div>
-                </div>
-                <div className="form">
-                  <label htmlFor="fatherName">
-                    <p>Father's Name</p>
-                    <input type="text" name="father-name" id="fatherName" />
-                  </label>
-                  <label htmlFor="motherName">
-                    <p>Mother's Name</p>
-                    <input type="text" name="mother-name" id="motherName" />
-                  </label>
-                  <label htmlFor="fatherOccupation">
-                    <p>Father's Occupation</p>
-                    <input type="text" name="father-occupation" id="fatherOccupation" />
-                  </label>
-                  <label htmlFor="motherOccupation">
-                    <p>Mother's Occupation</p>
-                    <input type="text" name="mothers-occupation" id="motherOccupation" />
-                  </label>
-                  <label htmlFor="phoneNo">
-                    <p>Phone No</p>
-                    <input type="tel" name="Phone-No" id="phoneNo" />
-                  </label>
-                  <label htmlFor="address">
-                    <p>Address</p>
-                    <input type="text" name="address" id="address" />
-                  </label>
-                  <label htmlFor="nationality">
-                    <p>Nationality</p>
-                    <input type="text" name="nationality" id="nationality" />
-                  </label>
+                <div className="btn top-30">
+                  <button type="reset">Reset</button>
+                  <button>Create</button>
                 </div>
               </Paper>
             </form>

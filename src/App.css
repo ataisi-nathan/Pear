@@ -124,3 +124,33 @@ a {
 .full-height {
     height: 100%;
 }
+.top-30 {
+    margin-top: 30px;
+}
+.btn {
+    display: flex;
+    gap: 1em;
+}
+.btn button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: #1976D2;
+    color: #fff;
+}
+.btn button:first-child {
+    background-color: orange;
+    color: #fff;
+}
+.row-data {
+    border-bottom: 1px solid #00000036;
+}
+
+.logout {
+    margin-top: 5em;
+    padding: 10px;
+    border: none;
+    color: #1976D2;
+    background-color: white;
+    width: 100%;
+}

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 export default function SideBar() {
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
     const [isSubMenuOpenOne, setIsSubMenuOpenOne] = useState(false);
+    const [isSubMenuOpenTwo, setIsSubMenuOpenTwo] = useState(false);
     const [open, setOpen] = useState(true);
     const toggleDrawer = () => {
       setOpen(!open);
@@ -14,13 +15,22 @@ export default function SideBar() {
     const toggleSubMenu = () => {
       setIsSubMenuOpen(!isSubMenuOpen);
       if (isSubMenuOpenOne == true) {
-        setIsSubMenuOpenOne(false)
+        setIsSubMenuOpen(false)
+        setIsSubMenuOpenTwo(false)
       }
     };
     const toggleSubMenuOne = () => {
       setIsSubMenuOpenOne(!isSubMenuOpenOne);
       if (isSubMenuOpen == true) {
         setIsSubMenuOpen(false)
+        setIsSubMenuOpenTwo(false)
+      }
+    };
+    const toggleSubMenuTwo = () => {
+      setIsSubMenuOpenTwo(!isSubMenuOpenTwo);
+      if (isSubMenuOpen == true || isSubMenuOpenOne == true) {
+        setIsSubMenuOpen(false)
+        setIsSubMenuOpenOne(false)
       }
     };
 
@@ -110,7 +120,7 @@ export default function SideBar() {
                 
                 <Divider sx={{my:0}} />
                 
-                <ListItem button component={Link} to="/add-teacher"> {/* Add Link component with "to" prop */}
+                <ListItem button component={Link} to="/teachers/add-teacher"> {/* Add Link component with "to" prop */}
                   <ListItemText primary="Add Teacher" />
                 </ListItem>
                 <Divider sx={{my:0}} />
@@ -162,10 +172,27 @@ export default function SideBar() {
             Classes Button Starts Here
             ******************************
             */}
-            <ListItem button component={Link} to="/classes"> {/* Add Link component with "to" prop */}
+            <ListItem onClick={toggleSubMenuTwo} button> {/* Add Link component with "to" prop */}
               <Class sx={{marginRight: "25px"}} />
               <ListItemText primary="Classes" />
             </ListItem>
+            <Divider sx={{my:0}} />
+
+            <Collapse in={isSubMenuOpenTwo}>
+              <List className="sub-menu" component="div" disablePadding>
+                <ListItem button component={Link} to="/classes/add-class"> {/* Add Link component with "to" prop */}
+                  <ListItemText primary="Add Class" />
+                </ListItem>
+
+                <Divider sx={{my:0}} />
+                
+                <ListItem button component={Link} to="/classes"> {/* Add Link component with "to" prop */}
+                  <ListItemText primary="Class Schedule" />
+                </ListItem>
+                
+                <Divider sx={{my:0}} />
+              </List>
+            </Collapse>
             {/*
             ******************************
             Classes Button Ends Here
@@ -180,7 +207,7 @@ export default function SideBar() {
             ******************************
             */}
             <ListItem button component={Link} to="/events"> {/* Add Link component with "to" prop */}
-              <Event sx={{marginRight: "25px"}} />
+              <Event sx={{marginRight: "25px"}} /> {/* Event Icon */}
               <ListItemText primary="Events" />
             </ListItem>
             {/*

@@ -1,19 +1,16 @@
 import { Box, Toolbar, Container, Grid, Paper, Typography } from "@mui/material";
 import Copyright from "../Common/copyright";
-import SubjectTable from "./coursesTable";
-import SubjectForm from "./createCourse";
+import EventTable from "./eventTable";
+import CreateEvent from "./createEvent";
 
-export default function Subjects() {
+export default function Events() {
 
   // Dummy Data
-  const subjects = [
-    { id: 2101, name: 'Mathematics', category: 'General', class: '5th Grade'},
-    { id: 2102, name: 'English Language', category: 'General', class: '5th Grade', },
-    { id: 2103, name: 'Chemistry', category: 'Science', class: '5th Grade'},
-    { id: 2104, name: 'Computer Sc', category: 'Practical', class: '5th Grade'},
-    { id: 2105, name: 'Food & Nutrition', category: 'Practical', class: '5th Grade'},
-    { id: 2106, name: 'Economics', category: 'Theory', class: '5th Grade'},
-    { id: 2107, name: 'Technical Drawing', category: 'Practical', class: '5th Grade'},
+  const eventData = [
+    { id: 201, title: "Children's Day Celebration", date: '17th May, 2024', message: "This is just a dummy text so just ignore whatever I put this besides this is just a demo and I don't know why I can't use lorem ispum"},
+    { id: 202, title: "Public Holiday", date: '14th May, 2024', message: "This is just a dummy text so just ignore whatever I put this besides this is just a demo and I don't know why I can't use lorem ispum"},
+    { id: 203, title: "Adjustment in closing date", date: '07th April, 2024', message: "This is just a dummy text so just ignore whatever I put this besides this is just a demo and I don't know why I can't use lorem ispum"},
+    { id: 204, title: "Resumption Date", date: '17th March, 2024', message: "This is just a dummy text so just ignore whatever I put this besides this is just a demo and I don't know why I can't use lorem ispum"},
   ];
 
   return (
@@ -34,18 +31,18 @@ export default function Subjects() {
         <Container maxWidth="lg" sx={{mt: 4, mb: 4}}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={5} lg={4}>
-              <SubjectForm />
+              <CreateEvent />
             </Grid>
             <Grid item xs={12} md={7} lg={8}>
               <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                 <div className="heading-row">
-                  <Typography variant='h6'>All Subjects</Typography>
+                  <Typography variant='h6'>Notice Board</Typography>
                   <div className="filter">
                     <input type="text" name="subjectNameSearch" id="subjectNameSearch" placeholder="Search Subject Name" />
                     <button>Search</button>
                   </div>
                 </div>
-                <SubjectTable data={subjects}/>
+                <EventTable data={eventData}/>
               </Paper>
             </Grid>  
           </Grid>

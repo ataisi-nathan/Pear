@@ -1,6 +1,6 @@
 import { Box, Toolbar, Container, Grid, Paper, Typography } from "@mui/material";
 import Chart from "./chart";
-import Copyright from './copyright';
+import Copyright from '../../Common/copyright';
 import Metrics from "./metrics";
 import SchoolTable from "./table";
 import FeeTable from "./tableFees";

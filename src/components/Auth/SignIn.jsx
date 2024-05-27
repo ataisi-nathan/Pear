@@ -23,9 +23,24 @@ function SignIn({ setIsAuthenticated }) {
 
   const handleLogin = () => {
     // Simulate login (you can add actual authentication logic here)
-    if (username.trim() !== '' && password.trim() !== '') {
+    if (username.trim() === 'admin' && password.trim() === 'admin') {
       // Set authentication status to true and store in local storage
-      localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('isAuthenticated', 'admin');
+      setIsAuthenticated(true);
+      navigate('/dashboard'); // Redirect to dashboard after successful login
+    } else if (username.trim() === 'parent' && password.trim() === 'parent') {
+      // Set authentication status to true and store in local storage
+      localStorage.setItem('isAuthenticated', 'parent');
+      setIsAuthenticated(true);
+      navigate('/dashboard'); // Redirect to dashboard after successful login
+    } else if (username.trim() === 'student' && password.trim() === 'student') {
+      // Set authentication status to true and store in local storage
+      localStorage.setItem('isAuthenticated', 'student');
+      setIsAuthenticated(true);
+      navigate('/dashboard'); // Redirect to dashboard after successful login
+    } else if (username.trim() === 'teacher' && password.trim() === 'teacher') {
+      // Set authentication status to true and store in local storage
+      localStorage.setItem('isAuthenticated', 'teacher');
       setIsAuthenticated(true);
       navigate('/dashboard'); // Redirect to dashboard after successful login
     } else {

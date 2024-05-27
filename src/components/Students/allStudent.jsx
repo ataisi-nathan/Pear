@@ -1,5 +1,5 @@
 import { Box, Toolbar, Container, Grid, Paper, Typography } from "@mui/material";
-import Copyright from "../Dashboard/Admin/copyright";
+import Copyright from "../Common/copyright";
 import StudentTable from "./studentTable";
 
 export default function AllStudent() {

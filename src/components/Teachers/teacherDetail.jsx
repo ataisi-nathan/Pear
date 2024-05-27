@@ -1,5 +1,5 @@
 import { Box, Toolbar, Container, Grid, Paper, Typography } from "@mui/material";
-import Copyright from "../Dashboard/Admin/copyright";
+import Copyright from "../Common/copyright";
 
 export default function TeacherDetail() {
   const teachers = { id: 1, name: 'John Doe', gender: 'Male', class: '5', section: 'A', address: 'No 123 Cresent Rd', dateOfBirth: '25-01-2008', parentName: 'Michael Doe', religion: "Islam", email: "johndoe@email.coz", admitDate: "05/04/2023", phoneNo: "+234 81 2340 7816" }

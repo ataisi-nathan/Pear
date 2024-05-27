@@ -3,10 +3,11 @@ import './App.css'
 import SignIn from './components/Auth/SignIn'
 import AdminDashboard from './components/Dashboard/Admin/Dashboard';
 import Home from './components/Dashboard/Admin/home';
+import ParentDashboard from './components/Dashboard/Parent/dashboard';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem('isAuthenticated') === 'true'
+    localStorage.getItem('isAuthenticated')
   );
 
   const handleLogout = () => {
@@ -17,8 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      {isAuthenticated ? (
+      {isAuthenticated === "admin" ? (
         <AdminDashboard />
+      ) : isAuthenticated === "parent" ? (
+        <ParentDashboard />
       ) : (
         <SignIn />
       )}

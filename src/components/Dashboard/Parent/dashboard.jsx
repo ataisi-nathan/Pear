@@ -13,19 +13,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { KeyboardArrowDown, Mail, Apps } from '@mui/icons-material';
 import { Stack, Avatar, Menu, MenuItem, Button, CssBaseline, Typography, Divider, Box } from '@mui/material';
 import { useState } from 'react';
-import SideBar from './Sidebar';
+import SideBar from './sidebar';
 import Home from './home';
-import AllStudent from '../../Students/allStudent';
-import StudentDetail from '../../Students/StudentDetail';
-import AdmitForm from '../../Students/admitForm';
-import AllTeacher from '../../Teachers/allTeachers';
-import AllParent from '../../Parents/allParents';
-import TeacherDetail from '../../Teachers/teacherDetail';
-import Subjects from '../../Courses/courses';
-import AddTeacher from '../../Teachers/addTeacher';
-import AddClass from '../../Classes/addClass';
-import ClassSchedule from '../../Classes/classSchedule';
-import Events from '../../Events/event';
 
 const drawerWidth = 240;
 
@@ -76,7 +65,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function AdminDashboard({ handleLogout }) {
+export default function ParentDashboard({ handleLogout }) {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -165,19 +154,7 @@ export default function AdminDashboard({ handleLogout }) {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path="/dashboard" element={<Home />} />
-          <Route path="/students" element={<AllStudent />} />
-          <Route path="/students/detail" element={<StudentDetail />} />
-          <Route path="/students/admit" element={<AdmitForm />} />
-          <Route path="/students/detail" element={<StudentDetail />} />
-          <Route path="/teachers" element={<AllTeacher />} />
-          <Route path="/teachers/detail" element={<TeacherDetail />} />
-          <Route path="/teachers/add-teacher" element={<AddTeacher />} />
-          <Route path="/parents" element={<AllParent />} />
-          <Route path="/subjects" element={<Subjects />} />
-          <Route path="/classes" element={<ClassSchedule />} />
-          <Route path="/classes/add-class" element={<AddClass />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/classes/add-class" element={<AddClass />} />
+          
           {/* </Route> */}
         </Routes>
       </Box>
